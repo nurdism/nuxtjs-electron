@@ -216,7 +216,7 @@ module.exports = async function nuxtElectron(options) {
         }
     })
 
-    this.extendBuild((config, { isClient }) => {
+    this.extendBuild((config, { isClient, isDev }) => {
         if (isClient) { config.target = 'electron-renderer' }
         if (!isDev) { config.output.publicPath = './_nuxt/' } // https://github.com/nuxt/nuxt.js/issues/2892
     })
