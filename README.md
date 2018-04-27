@@ -5,8 +5,8 @@
 - Seamless integration with nuxt build/generate
 
 ## Setup
-- Add `@nuxtjs/electron` dependency using yarn or npm to your project
-- Add `@nuxtjs/electron` to `modules` section of `nuxt.config.js`
+- Add `nuxtjs-electron` dependency using yarn or npm to your project
+- Add `nuxtjs-electron` to `modules` section of `nuxt.config.js`
 ```js
   modules: [
     ['@nuxtjs/electron', {
