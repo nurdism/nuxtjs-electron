@@ -1,3 +1,9 @@
-.idea
-*.log
 node_modules
+*.iml
+.idea
+*.log*
+.nuxt
+.vscode
+.DS_STORE
+coverage
+dist
