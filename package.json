@@ -4,6 +4,11 @@
   "license": "MIT",
   "repository": "https://github.com/nurdism/nuxtjs-electron",
   "homepage": "https://github.com/nurdism/nuxtjs-electron",
+  "author": {
+    "name": "Nurdism",
+    "email": "nurdism.io@gmail.com",
+    "url": "https://github.com/nurdism"
+  },
   "publishConfig": {
     "access": "public"
   },

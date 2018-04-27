@@ -43,8 +43,8 @@ const config = (options, nuxt, generate) => {
                     exclude: /(node_modules|bower_components)/,
                     use: {
                         loader: 'babel-loader',
-                        options: {
-                            presets: [ ["env", {"targets": { "node": 7 }, "useBuiltIns": true }] ],
+                        options: options.build && options.build.babel ? options.build.babel : {
+                            presets: [ ['env', {'targets': { 'node': 7 }, 'useBuiltIns': true }] ],
                             plugins: ['add-module-exports']
                         }
                     }
@@ -68,7 +68,7 @@ const config = (options, nuxt, generate) => {
                 '~': path.join(nuxt.srcDir),
                 '~~': path.join(nuxt.rootDir),
                 '@': path.join(nuxt.srcDir),
-                '@@': path.join(nuxt.rootDir),
+                '@@': path.join(nuxt.rootDir)
             }
         },
 
@@ -96,11 +96,11 @@ const plugins = (config, options, nuxt, generate) => {
             }))
         }
 
-        let pkg = path.join(nuxt.srcDir, options.main || 'package.json')
+        let pkg = path.join(nuxt.srcDir, 'package.json')
         if (fs.existsSync(pkg)) {
             config.plugins.push(new CopyWebpackPlugin([{
                 from: pkg,
-                to: 'package.json',
+                to: 'package.json'
             }]))
         }
     }
@@ -196,6 +196,10 @@ module.exports = async function nuxtElectron(options) {
         throw new Error('Must run in SPA mode for Electron to work properly!') // Not sure if this is *really* needed? Too lazy to find out...
     }
 
+    if (this.options.router.mode !== 'hash') {
+        throw new Error('Router mode must be in hash mode for Electron to work properly!') // https://github.com/nuxt/nuxt.js/issues/3125
+    }
+
     this.nuxt.hook('build:done', async () => {
         if (!compiler) {
             await build(options, this.options)
@@ -214,6 +218,7 @@ module.exports = async function nuxtElectron(options) {
 
     this.extendBuild((config, { isClient }) => {
         if (isClient) { config.target = 'electron-renderer' }
+        if (!isDev) { config.output.publicPath = './_nuxt/' } // https://github.com/nuxt/nuxt.js/issues/2892
     })
 }
 

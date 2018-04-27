@@ -12,6 +12,10 @@
     ['@nuxtjs/electron', {
       main: 'main.js',
       build: {
+        babel: {
+            presets: [ ['env', {'targets': { 'node': 7 }, 'useBuiltIns': true }] ],
+            plugins: ['add-module-exports']
+        },
         extend(config, options, nuxt) {
           // extend webpack config
         }
@@ -22,10 +26,13 @@
 
 ## Options
 
-### `main`
+### `main` - Entry point for electron main
   - Default: `main.js`
 
-### `build.extend(config, options, nuxt)`
+### `build.babel` - babel-loader config
+  - Default: `{ presets: [ ['env', {'targets': { 'node': 7 }, 'useBuiltIns': true }] ], plugins: ['add-module-exports'] }`
+
+### `build.extend(config, options, nuxt)` - webpack config
   - @config: `webpack config object`
   - @options: `module options object`
   - @nuxt: `nuxt.options object`
