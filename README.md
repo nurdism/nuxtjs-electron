@@ -1,3 +1,14 @@
+<p align="center">
+  <img width="128" src="https://i.imgur.com/sY8LqKi.png">
+  <h1>nuxtjs-electron</h1>
+  <img src="https://david-dm.org//nurdism/nuxtjs-electron/status.svg" alt="Dependencies Status">
+  <img src="https://david-dm.org/nurdism/nuxtjs-electron/dev-status.svg" alt="Dev Dependencies Status">
+  <img src="https://david-dm.org/nurdism/nuxtjs-electron/peer-status.svg" alt="Peer Dependencies Status">
+  <a href="https://www.npmjs.com/package/nuxtjs-electron"><img src="https://img.shields.io/npm/dm/nuxtjs-electron.svg" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/nuxtjs-electron"><img src="https://img.shields.io/npm/v/nuxtjs-electron.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/nuxtjs-electron"><img src="https://img.shields.io/npm/l/nuxtjs-electron.svg" alt="License"></a>
+</p>
+
 > This is a utility module that helps you work with electron inside nuxt.
 
 **Features**
@@ -12,6 +23,7 @@
     ['@nuxtjs/electron', {
       main: 'main.js',
       build: {
+        warnings: false,
         babel: {
             presets: [ ['env', {'targets': { 'node': 7 }, 'useBuiltIns': true }] ],
             plugins: ['add-module-exports']
@@ -28,6 +40,9 @@
 
 ### `main` - Entry point for electron main
   - Default: `main.js`
+
+### `build.warnings` - hide webpack warnings
+  - Default: true
 
 ### `build.babel` - babel-loader config
   - Default: `{ presets: [ ['env', {'targets': { 'node': 7 }, 'useBuiltIns': true }] ], plugins: ['add-module-exports'] }`
