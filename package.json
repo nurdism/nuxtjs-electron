@@ -1,6 +1,6 @@
 {
   "name": "nuxtjs-electron",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "license": "MIT",
   "repository": "https://github.com/nurdism/nuxtjs-electron",
   "homepage": "https://github.com/nurdism/nuxtjs-electron",
@@ -13,6 +13,12 @@
     "access": "public"
   },
   "main": "lib/module.js",
+  "keywords": [
+    "nuxt",
+    "nuxtjs",
+    "vue",
+    "electron"
+  ],
   "scripts": {
     "lint": "eslint lib",
     "release": "standard-version && git push --follow-tags && npm publish"
