@@ -1,13 +1,15 @@
 <p align="center">
   <img width="128" src="https://i.imgur.com/sY8LqKi.png">
-  <h1>nuxtjs-electron</h1>
-  <img src="https://david-dm.org//nurdism/nuxtjs-electron/status.svg" alt="Dependencies Status">
+  <br><br>
+  <img src="https://david-dm.org/nurdism/nuxtjs-electron/status.svg" alt="Dependencies Status">
   <img src="https://david-dm.org/nurdism/nuxtjs-electron/dev-status.svg" alt="Dev Dependencies Status">
   <img src="https://david-dm.org/nurdism/nuxtjs-electron/peer-status.svg" alt="Peer Dependencies Status">
   <a href="https://www.npmjs.com/package/nuxtjs-electron"><img src="https://img.shields.io/npm/dm/nuxtjs-electron.svg" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/nuxtjs-electron"><img src="https://img.shields.io/npm/v/nuxtjs-electron.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/nuxtjs-electron"><img src="https://img.shields.io/npm/l/nuxtjs-electron.svg" alt="License"></a>
 </p>
+
+# nuxtjs-electron
 
 > This is a utility module that helps you work with electron inside nuxt.
 
