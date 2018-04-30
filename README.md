@@ -7,6 +7,7 @@
   <a href="https://www.npmjs.com/package/nuxtjs-electron"><img src="https://img.shields.io/npm/dm/nuxtjs-electron.svg" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/nuxtjs-electron"><img src="https://img.shields.io/npm/v/nuxtjs-electron.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/nuxtjs-electron"><img src="https://img.shields.io/npm/l/nuxtjs-electron.svg" alt="License"></a>
+  <a href="https://discord.gg/Kzkd6V3" ><img src="https://img.shields.io/badge/chat-on%20discord-blue.svg" alt="Chat on discord"><a/>
 </p>
 
 # nuxtjs-electron
