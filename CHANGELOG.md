@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.7"></a>
+## [0.1.7](https://github.com/nurdism/nuxtjs-electron/compare/v0.1.6...v0.1.7) (2018-04-30)
+
+
+
 <a name="0.1.6"></a>
 ## [0.1.6](https://github.com/nurdism/nuxtjs-electron/compare/v0.1.4...v0.1.6) (2018-04-29)
 
