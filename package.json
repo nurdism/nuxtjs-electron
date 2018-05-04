@@ -24,7 +24,7 @@
     "release": "standard-version && git push --follow-tags && npm publish"
   },
   "peerDependencies": {
-    "electron": "1.x"
+    "electron": "1.x || 2.x"
   },
   "devDependencies": {
     "eslint": "latest",
