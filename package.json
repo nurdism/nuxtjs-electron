@@ -21,10 +21,11 @@
   ],
   "scripts": {
     "lint": "eslint lib",
-    "release": "standard-version && git push --follow-tags && npm publish"
+    "release": "standard-version && git push --follow-tags && npm publish",
+    "deps": "npm-check -u"
   },
   "peerDependencies": {
-    "electron": "1.x || 2.x"
+    "electron": "*"
   },
   "devDependencies": {
     "eslint": "latest",
@@ -33,19 +34,20 @@
     "eslint-plugin-node": "latest",
     "eslint-plugin-promise": "latest",
     "eslint-plugin-standard": "latest",
+    "npm-check": "latest",
     "standard-version": "latest"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^7.1.5",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "chalk": "^2.3.2",
-    "copy-webpack-plugin": "^4.5.1",
+    "copy-webpack-plugin": "^4.5.2",
     "node-loader": "^0.6.0",
-    "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "^4.4.1",
-    "webpack-bundle-analyzer": "^2.11.1",
-    "webpack-format-messages": "^1.0.2"
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.4",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-format-messages": "^2.0.3"
   }
 }
